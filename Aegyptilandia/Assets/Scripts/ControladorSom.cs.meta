@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 07db262c1f15ca046bf6748cc4a4a611
+timeCreated: 1455745507
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - AtaqueAcertou: {fileID: 8300000, guid: 23857f1a463440f429191f89fbdadf73, type: 3}
+  - AtaqueErrou: {fileID: 8300000, guid: 23857f1a463440f429191f89fbdadf73, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

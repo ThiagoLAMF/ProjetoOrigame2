@@ -6,7 +6,8 @@ public enum soundFx
     AtaqueAcertou,
     AtaqueErrou,
     Picado,
-    Pulo
+    Pulo,
+    FecharLixo
 }
 
 public class ControladorSom : MonoBehaviour {
@@ -17,6 +18,7 @@ public class ControladorSom : MonoBehaviour {
     public AudioClip AtaqueErrou;
     public AudioClip Picado;
     public AudioClip Pulo;
+    public AudioClip FecharLixo;
 
     public static ControladorSom instance;
 
@@ -49,6 +51,9 @@ public class ControladorSom : MonoBehaviour {
                 break;
             case soundFx.Pulo:
                 instance.audio.PlayOneShot(instance.Pulo);
+                break;
+            case soundFx.FecharLixo:
+                instance.audio.PlayOneShot(instance.FecharLixo);
                 break;
         }
     }

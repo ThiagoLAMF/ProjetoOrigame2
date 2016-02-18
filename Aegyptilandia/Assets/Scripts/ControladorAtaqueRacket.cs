@@ -26,10 +26,12 @@ public class ControladorAtaqueRacket : MonoBehaviour {
         {
             player.GetComponent<ControladorPersonagem>().Coins += 1;
 
+            Destroy(col.gameObject);
+
             ControladorSom.playSound(soundFx.AtaqueAcertou);
             
             Instantiate(Coins);
-        }
+        }   
         
     }
 }

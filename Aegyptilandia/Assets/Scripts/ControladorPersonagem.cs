@@ -25,6 +25,8 @@ public class ControladorPersonagem : MonoBehaviour
 
     public bool agachar;
 
+    public GameObject objetoInteracao;
+
     //Atributos diretos do personagem
 
     public int Coins;
@@ -128,7 +130,12 @@ public class ControladorPersonagem : MonoBehaviour
             agachar = false;
         }
 
+        //Controla a intereção com objetos
 
+        if(Input.GetAxis("Submit") != 0 && objetoInteracao != null)
+        {
+            objetoInteracao.SendMessage("interacao", SendMessageOptions.DontRequireReceiver);
+        }
     }
 
     void Inverter()
@@ -139,17 +146,20 @@ public class ControladorPersonagem : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
-
-    }
-
-    void OnColliderEnter2D(Collider2D col)
-    {
-        //Caso o mosquito toque o personagem ele sofrerá dano
         if(col.gameObject.tag == "Mosquito")
         {
             ControladorSom.playSound(soundFx.Picado);
+        }
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "interacao")
+        {
+            objetoInteracao = col.gameObject;
         }
     }
 

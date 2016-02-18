@@ -71,9 +71,9 @@ public class ControladorMosquito : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
-	void OnTriggerEnter2D(Collider2D col){
+	void OnCollisionEnter2D(Collision2D col){
 
-		if (col.tag == "Personagem") { //Destroy o Objeto quando em contato com o Player
+		if (col.gameObject.tag == "Personagem") { //Destroy o Objeto quando em contato com o Player
 			Destroy (gameObject);
 
 		}

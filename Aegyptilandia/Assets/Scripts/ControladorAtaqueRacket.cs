@@ -22,7 +22,7 @@ public class ControladorAtaqueRacket : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (player.GetComponent<ControladorPersonagem>().atacar)
+        if (player.GetComponent<ControladorPersonagem>().atacar && col.tag == "Mosquito")
         {
             player.GetComponent<ControladorPersonagem>().Coins += 1;
 

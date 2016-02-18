@@ -32,6 +32,13 @@ public class ControladorPersonagem : MonoBehaviour
     public int Coins;
     public float vida;
 
+    //Itens pertencentes ao invertário
+
+    public int kitMedico;
+    public int veneno;
+    public int aguaSanitaria;
+    public bool areia;
+
     public GameObject ControladorAtaque;
 
     #endregion Atributos e propriedades
@@ -46,6 +53,10 @@ public class ControladorPersonagem : MonoBehaviour
 
         Coins = 0;
         vida = 100;
+        kitMedico = 0;
+        veneno = 0;
+        aguaSanitaria = 0;
+        areia = false;
     }
 
     // Update is called once per frame

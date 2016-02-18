@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LataLixo : MonoBehaviour {
+public class CaixaAzul : MonoBehaviour {
 
-    public GameObject lataAberta;
-    public GameObject lataFechada;
+    public GameObject caixaAberta;
+    public GameObject caixaFechada;
 
     public GameObject Personagem;
     public GameObject Coins;
@@ -12,11 +12,10 @@ public class LataLixo : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
-        lataAberta.SetActive(true);
-        lataFechada.SetActive(false);
+        caixaAberta.SetActive(true);
+        caixaFechada.SetActive(false);
         aberto = true;
-	
+
         Personagem = GameObject.FindGameObjectWithTag("Personagem");
     }
 	
@@ -29,8 +28,8 @@ public class LataLixo : MonoBehaviour {
     {
         if (aberto)
         {
-            lataAberta.SetActive(false);
-            lataFechada.SetActive(true);
+            caixaAberta.SetActive(false);
+            caixaFechada.SetActive(true);
             ControladorSom.playSound(soundFx.FecharLixo);
             aberto = false;
             Instantiate(Coins);
